@@ -72,7 +72,7 @@ def run_module():
     # define available arguments/parameters a user can pass to the module
     module_args = dict(
         text=dict(type='str', required=True),
-        when=dict(type='str', required=True, choises=['before', 'after']),
+        when=dict(type='str', required=True, choices=['before', 'after']),
         fqdn=dict(type='bool', required=False, default=False),
         state=dict(type='str', required=False, default='present', choices=['absent', 'present'])
 
