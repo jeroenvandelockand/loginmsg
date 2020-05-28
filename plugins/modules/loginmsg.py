@@ -122,8 +122,9 @@ def run_module():
     if module.params['state'] == 'absent':
         try:
             with open(filename) as file_object:
-                os.remove(filename)
-                result['changed'] = True
+                pass
+            os.remove(filename)
+            result['changed'] = True
         except FileNotFoundError:
             print(filename + "Not Found.")
             result['changed'] = False
